@@ -78,7 +78,19 @@ try:
                 time.sleep(0.01)
 
             r = ser.readline().decode().strip()
-            print(r)
+            if (r == 0):
+                print("0 Straight")
+            if (r == 1):
+                print("1 Reclining")
+            if (r == 2):
+                print("2 Left sitting")
+            if (r == 3):
+                print("3 Right sitting")
+            if (r == 4):
+                print("4 Crossed left leg")
+            if (r == 5):
+                print("5 Crossed right leg")
+                
     except KeyboardInterrupt:
         pass
 except serial.serialutil.SerialException:
